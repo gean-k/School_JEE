@@ -112,14 +112,20 @@
     justify-content: center;
   }
   
-  .formbg {
-      margin: 0px auto;
-      width: 100%;
-      max-width: 448px;
-      background: white;
-      border-radius: 4px;
-      box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
-  }
+.formbg-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+.formbg {
+  width: 100%;
+  max-width: 700px;
+  background: white;
+  border-radius: 4px;
+  box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+}
   span {
       display: block;
       font-size: 20px;
