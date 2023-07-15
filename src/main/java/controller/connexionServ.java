@@ -6,11 +6,11 @@ package controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import metier.metierConnexion;
 import modele.modeleconnexion;
 
@@ -22,8 +22,10 @@ import modele.modeleconnexion;
 public class connexionServ extends HttpServlet {
 
      private static final String VUE_FORMULAIRE = "/connexion.jsp";
-//  private static final String VUE_RESULTAT = "/donneesPersonnelles.jsp";
-    
+//  private static final long serialVersionUID = 1L;
+    public connexionServ(){
+        super();
+    }
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

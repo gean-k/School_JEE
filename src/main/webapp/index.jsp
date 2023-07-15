@@ -44,7 +44,7 @@
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <a href="index.jsp" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
             <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>eLEARNING</h2>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -52,20 +52,20 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link active">Accueil</a>
-                <a href="about.html" class="nav-item nav-link">A propos de nous</a>
-                <a href="courses.html" class="nav-item nav-link">Cours</a>
+                <a href="index.jsp" class="nav-item nav-link active">Accueil</a>
+                <a href="about.jsp" class="nav-item nav-link">A propos de nous</a>
+                <a href="courses.jsp" class="nav-item nav-link">Cours</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu fade-down m-0">
-                        <a href="team.html" class="dropdown-item">Notre equipe</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        <a href="team.jsp" class="dropdown-item">Notre equipe</a>
+                        <a href="testimonial.jsp" class="dropdown-item">Testimonial</a>
                         <a href="404.html" class="dropdown-item">404 Page</a>
                     </div>
                 </div>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                <a href="contact.jsp" class="nav-item nav-link">Contact</a>
             </div>
-            <a href="connexion.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Nous Joindre<i class="fa fa-arrow-right ms-3"></i></a>
+            <a href="connexion.jsp" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Nous Joindre<i class="fa fa-arrow-right ms-3"></i></a>
 
         </div>
     </nav>
@@ -85,7 +85,7 @@
                                 <h1 class="display-3 text-white animated slideInDown">The Best Online Learning Platform</h1>
                                 <p class="fs-5 text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea sanctus eirmod elitr.</p>
                                 <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
-                                <a href="connexion.html" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Nous joindre</a>
+                                <a href="connexion.jsp" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Nous joindre</a>
                             </div>
                         </div>
                     </div>
@@ -101,7 +101,7 @@
                                 <h1 class="display-3 text-white animated slideInDown">Get Educated Online From Your Home</h1>
                                 <p class="fs-5 text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea sanctus eirmod elitr.</p>
                                 <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
-                                <a href="connexion.html" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Nous joindre</a>
+                                <a href="connexion.jsp" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Nous joindre</a>
                             </div>
                         </div>
                     </div>
@@ -268,7 +268,7 @@
                             <img class="img-fluid" src="img/course-1.jpg" alt="">
                             <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
                                 <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
-                                <a href="connexion.html" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Nous joindre</a>
+                                <a href="connexion.jsp" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Nous joindre</a>
                             </div>
                         </div>
                         <div class="text-center p-4 pb-0">
@@ -296,7 +296,7 @@
                             <img class="img-fluid" src="img/course-2.jpg" alt="">
                             <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
                                 <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
-                                <a href="connexion.html" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Nous joindre</a>
+                                <a href="connexion.jsp" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Nous joindre</a>
                             </div>
                         </div>
                         <div class="text-center p-4 pb-0">
@@ -324,7 +324,7 @@
                             <img class="img-fluid" src="img/course-3.jpg" alt="">
                             <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
                                 <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
-                                <a href="connexion.html" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Nous joindre</a>
+                                <a href="connexion.jsp" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Nous joindre</a>
                             </div>
                         </div>
                         <div class="text-center p-4 pb-0">
