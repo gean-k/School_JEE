@@ -52,7 +52,7 @@
                                 <div class="formbg-inner padding-horizontal--48">
 
 
-                                    <form action="connexionServ" id="stripe-login" accept-charset="utf-8" method="GET">
+                                    <form action="connexionServ" id="stripe-login" accept-charset="utf-8" method="post">
 
                                         <div class="field padding-bottom--24">
                                             <label for="email">Email</label>
@@ -61,27 +61,16 @@
                                         <div class="field padding-bottom--24">
                                             <div class="grid--50-50">
                                                 <label for="password">Mot de passe</label>
-                                                <div class="reset-pass">
-                                                    <a href="#">Mot de passe oublié?</a>
-                                                </div>
+                                                
                                             </div>
                                             <input type="password" name="password">
                                         </div>
-                                        <div class="field field-checkbox padding-bottom--24 flex-flex align-center">
-                                            <label for="checkbox">
-                                                <input type="checkbox" name="checkbox"> Voir mot de passe
-                                            </label>
-                                        </div>
+                                       
                                         <div class="field padding-bottom--24">
-
-                                            <c:out value="bonjour"/>
-
-
-
                                             <input type="submit" name="submit" value="Continue">
                                         </div>
                                         <div class="footer-link padding-top--24">
-                                            <span>Vous n'avez pas de compte?  <a href='<c:url value="/inscription.jsp"/>'>Inscrivez vous ici</a></span>
+                                            <span>Vous n'avez pas de compte?  <a href='<c:url value="/enregistrement.jsp"/>'>Inscrivez vous ici</a></span>
 
                                         </div>
                                     </form>

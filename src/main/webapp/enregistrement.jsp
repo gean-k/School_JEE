@@ -1,18 +1,21 @@
+
+
 <%-- 
     Document   : inscription
-    Created on : 16 juil. 2023, 00:53:32
+    Created on : 14 juil. 2023, 21:51:54
     Author     : Administrateur
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+  <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html lang="en">
 
 
     <head>
         <meta charset="utf-8">
-        <title>Institute Emeraude: Inscription</title>
+        <title>Institute Emeraude: Sign in</title>
         <link rel="stylesheet" type="text/css" href="css/inscription.css">
     </head>
     <body>
@@ -52,7 +55,7 @@
                 </div>
                 <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
                     <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
-                        <h1><a href="http://blog.stackfindover.com/" rel="dofollow">Faire Mon Inscription</a></h1>
+                        <h1><a href="http://blog.stackfindover.com/" rel="dofollow">Enregistrement</a></h1>
                     </div>
                     <div class="formbg-outer">
                         <div class="formbg-inner padding-horizontal--48" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: auto;">              
@@ -62,65 +65,36 @@
                                         <div id="imagePreview" style="width: 200px; height: 200px; margin-right: 24px; border: 2px solid #ccc; overflow: hidden; border-radius: 50%;">
                                             <img id="previewImg" src="images/photo_defaut.jpeg" alt="Image par défaut" style="width: 100%; height: 100%; object-fit: cover;">
                                         </div>
-                                        <form action="inscriptionServ" method="post" id="stripe-login" style="flex-grow: 1; ">
+                                        <form action="enregistrementelvServ" method="post" id="stripe-login" style="flex-grow: 1; ">
 
 
                                             <div class="field" style="display: flex;">
 
                                                 <div style="flex: 1; margin-right: 12px;">
                                                     <label for="nom">Nom</label>
-                                                    <input type="text" name="nom" value="${mdco.nom}">
+                                                    <input type="text" name="nom">
                                                 </div>
 
                                                 <div style="flex: 1; margin-left: 12px;">
                                                     <label for="prenom">Prénom</label>
-                                                    <input type="text" name="prenom" value="${mdco.prenom}">
+                                                    <input type="text" name="prenom">
                                                 </div>
 
                                             </div>
+
 
                                             <div class="field" style="display: flex;">
 
                                                 <div style="flex: 1; margin-right: 12px;">
                                                     <label for="email">Email</label>
-                                                    <input type="email" name="email" value="${mdco.mail}">
+                                                    <input type="email" name="email">
                                                 </div>
 
                                                 <div style="flex: 1; margin-left: 12px;">
                                                     <div class="grid--50-50">
-                                                        <label for="password">Matricule</label>
+                                                        <label for="password">Mot de passe</label>
                                                     </div>
-                                                    <input type="text" name="matricule">
-                                                </div>
-                                            </div>
-
-
-                                            <div class="field" style="display: flex;">
-
-                                                <div style="flex: 1; margin-right: 12px;">
-                                                    <label for="email">Filiere</label>
-
-                                                    <select id="idfiliere" name="filiere">
-                                                        <option value="74">Comptabilité</option>
-                                                        <option value="73">Miage</option>
-                                                        <option value="71">Actuariat</option>
-                                                        <option value="72">Statistique</option>
-                                                    </select>
-
-                                                </div>
-
-                                                <div style="flex: 1; margin-left: 12px;">
-                                                    <div class="grid--50-50">
-                                                        <label for="password">Niveau</label>
-                                                    </div>
-                                                    <select id="idniv" name="niveau" >
-                                                        <option value="1">Licence 1</option>
-                                                        <option value="2">Licence 2</option>
-                                                        <option value="3">Licence 3</option>
-                                                        <option value="4">Master 1</option>
-                                                        <option value="5">Master 2</option>
-                                                    </select>
-
+                                                    <input type="password" name="password">
                                                 </div>
 
                                             </div>
@@ -128,22 +102,28 @@
                                             <div class="field" style="display: flex;">
                                                 <div style="flex: 1; margin-right: 12px;">
                                                     <label for="date_naissance">Date de naissance</label>
-                                                    <input type="text" name="dateinsc" value="">
+                                                    <input type="date" name="date_naissance">
                                                 </div>
 
 
                                                 <div style="flex: 1; margin-left: 12px;">
                                                     <label for="lieu_naissance">Lieu de naissance</label>
-                                                    <input type="text" name="lieu_naissance" value="${mdco.lieunaiss}">
+                                                    <input type="text" name="lieu_naissance">
                                                 </div>
                                             </div>
 
+
                                             <div class="field" style="display: flex;">
+
+                                               
+
                                                 <div style="flex: 1; margin-left: 12px;">
                                                     <div class="grid--50-50">
-                                                        <label for="photo">Photo élève</label>
-                                                        <input type="file" name="photo" id="photoInput" onload="" onchange="previewImage(event)">
-                                                        <img id="preview" src="img/IconeRecerche.jpeg" alt="" style="max-width: 200px; max-height: 200px; display: ${mdco.photo != null ? 'block' : 'none'};">
+                                                        
+                                                         <label for="photo">Photo élève</label>
+                                                <input type="file" name="photo" onchange="previewImage(event)">
+                                            
+                                                        
                                                     </div>
 
                                                 </div>
@@ -151,16 +131,16 @@
                                             </div>
 
                                             <div class="field">
-                                                <label for="password">Sexe</label>
+                                                                                                        <label for="password">Sexe</label>
 
                                                 <select name="sexe" id="id" class="a">
-                                                    <option value="1">Masculin</option>
-                                                    <option value="2">Feminin</option>
-                                                </select>
-
-                                            </div><br>
+                                                            <option value="1">Masculin</option>
+                                                            <option value="2">Feminin</option>
+                                                        </select>
+                                                
+                                               </div><br>
                                             <div class="field">
-                                                <input type="submit" name="submit" value="Valider Inscription">
+                                                <input type="submit" name="submit" value="Continue">
                                             </div>
                                         </form>
                                     </div>

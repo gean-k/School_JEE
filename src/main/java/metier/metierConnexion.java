@@ -31,18 +31,28 @@ public class metierConnexion  {
      ps.setString(2, mdp);
             ResultSet rs=ps.executeQuery();
         while(rs.next()){
-
-            mc.setMail(rs.getString("mailElv"));
-            mc.setMdp("mdpElv");
+            mc.setNom(rs.getString(3));
+            mc.setPrenom(rs.getString(4));
+            mc.setDatenaiss(rs.getString(5));
+            mc.setLieunaiss(rs.getString(6));
+            mc.setIdSexe(rs.getInt(10));
+            mc.setPhoto(rs.getString(7));
+            mc.setMail(rs.getString(8));
+            mc.setMdp(rs.getString(9));
+        
         }
+         ps.close();
+    conn.close();
     }catch(SQLException e){e.printStackTrace();}
         
         return mc;
+         
+   
     }
 
 public static void main (String[] args){
 metierConnexion mco= new metierConnexion();
-modeleconnexion mdc=mco.seco("test@gmail.com", "123456");
+modeleconnexion mdc=mco.seco("z@z.c", "zzzzzz");
 System.out.println(mdc.getMail());
 }
 }

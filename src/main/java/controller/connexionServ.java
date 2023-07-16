@@ -4,13 +4,14 @@
  */
 package controller;
 
+import jakarta.servlet.ServletContext;
 import java.io.IOException;
 import java.io.PrintWriter;
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import metier.metierConnexion;
 import modele.modeleconnexion;
 
@@ -22,7 +23,7 @@ import modele.modeleconnexion;
 public class connexionServ extends HttpServlet {
 
      private static final String VUE_FORMULAIRE = "/connexion.jsp";
-//  private static final String VUE_RESULTAT = "/donneesPersonnelles.jsp";
+     private static final String VUE_INDEX = "/index.jsp";
     
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -39,8 +40,17 @@ public class connexionServ extends HttpServlet {
         metierConnexion mco= new metierConnexion();
 modeleconnexion mdco=mco.seco(log, pwd);
 
-  request.setAttribute("mdco", mdco);
-    request.getRequestDispatcher(VUE_FORMULAIRE).forward(request, response);
+if(mdco.getMail()==null){
+    this.getServletContext().getRequestDispatcher(VUE_FORMULAIRE).forward(request, response);
+
+}else{
+ServletContext context = request.getServletContext();
+
+    context.setAttribute("mdco", mdco);
+    this.getServletContext().getRequestDispatcher(VUE_INDEX).forward(request, response);
+}
+
+  
 
     }
 

@@ -4,28 +4,24 @@
  */
 package modele;
 
-import java.sql.Date;
-
-/**'é
+/**
  *
  * @author Administrateur
  */
-public class eleve {
-private String mateleve;
+public class enregistrementEleve {
 private String nomeleve;
 private String prenomeleve;
-private Date  datenaisseleve;
+private String  datenaisseleve;
 private String lieunaiss;
 private String photo;
 private String maileleve;
 private String mdpeleve;
 private int idSexe;
 
-    public eleve() {
+    public enregistrementEleve() {
     }
 
-    public eleve(String mateleve, String nomeleve, String prenomeleve, Date datenaisseleve, String lieunaiss, String photo, String maileleve, String mdpeleve, int idSexe) {
-        this.mateleve = mateleve;
+    public enregistrementEleve(String nomeleve, String prenomeleve, String datenaisseleve, String lieunaiss, String photo, String maileleve, String mdpeleve, int idSexe) {
         this.nomeleve = nomeleve;
         this.prenomeleve = prenomeleve;
         this.datenaisseleve = datenaisseleve;
@@ -34,14 +30,6 @@ private int idSexe;
         this.maileleve = maileleve;
         this.mdpeleve = mdpeleve;
         this.idSexe = idSexe;
-    }
-
-    public String getMateleve() {
-        return mateleve;
-    }
-
-    public void setMateleve(String mateleve) {
-        this.mateleve = mateleve;
     }
 
     public String getNomeleve() {
@@ -60,11 +48,11 @@ private int idSexe;
         this.prenomeleve = prenomeleve;
     }
 
-    public Date getDatenaisseleve() {
+    public String getDatenaisseleve() {
         return datenaisseleve;
     }
 
-    public void setDatenaisseleve(Date datenaisseleve) {
+    public void setDatenaisseleve(String datenaisseleve) {
         this.datenaisseleve = datenaisseleve;
     }
 
@@ -107,8 +95,6 @@ private int idSexe;
     public void setIdSexe(int idSexe) {
         this.idSexe = idSexe;
     }
-
-
     
     
 }
