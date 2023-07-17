@@ -62,7 +62,9 @@
                                         <div id="imagePreview" style="width: 200px; height: 200px; margin-right: 24px; border: 2px solid #ccc; overflow: hidden; border-radius: 50%;">
                                             <img id="previewImg" src="images/photo_defaut.jpeg" alt="Image par défaut" style="width: 100%; height: 100%; object-fit: cover;">
                                         </div>
-                                        <form action="inscriptionServ" method="post" id="stripe-login" style="flex-grow: 1; ">
+                                        
+                                        
+                                        <form action="<%=request.getContextPath()%>/inscriptionServ" method="post" id="stripe-login" style="flex-grow: 1; ">
 
 
                                             <div class="field" style="display: flex;">
@@ -127,7 +129,7 @@
 
                                             <div class="field" style="display: flex;">
                                                 <div style="flex: 1; margin-right: 12px;">
-                                                    <label for="date_naissance">Date de naissance</label>
+                                                    <label for="date_naissance">Date d'inscription</label>
                                                     <input type="text" name="dateinsc" value="">
                                                 </div>
 

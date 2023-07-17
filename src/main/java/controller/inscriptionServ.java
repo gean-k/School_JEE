@@ -55,6 +55,7 @@ public class inscriptionServ extends HttpServlet {
      misc.faireInsc(inscription);
      //modifier matricule
      misc.modifMat(matricule, email);
+    this.getServletContext().getRequestDispatcher(VUE_INDEX).forward(request, response);
 
     }
     

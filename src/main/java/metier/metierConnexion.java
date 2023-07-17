@@ -22,7 +22,28 @@ public class metierConnexion  {
 
 
     public modeleconnexion seco(String mail,String mdp){
-        modeleconnexion mc= new modeleconnexion();
+         modeleconnexion mc= new modeleconnexion();
+
+if(mdp.length()==4){
+    Connection conn= connexion.getConnection();
+    String sql="SELECT * FROM `gestionnaire` WHERE `mailGest`=? AND `mdpGest`=?";
+    try{
+     PreparedStatement ps=conn.prepareStatement(sql);
+     ps.setString(1, mail);
+     ps.setString(2, mdp);
+            ResultSet rs=ps.executeQuery();
+        while(rs.next()){
+            mc.setMail(rs.getString(2));
+            mc.setMdp(rs.getString(3));
+            
+        
+        }
+         ps.close();
+    conn.close();
+    }catch(SQLException e){e.printStackTrace();}
+    
+}else{
+         
     Connection conn= connexion.getConnection();
     String sql="SELECT * FROM eleve WHERE `mailElv`=? AND `mdpElv`=?";
     try{
@@ -44,15 +65,18 @@ public class metierConnexion  {
          ps.close();
     conn.close();
     }catch(SQLException e){e.printStackTrace();}
+    
+}
+   return mc;
         
-        return mc;
+       
          
    
     }
 
 public static void main (String[] args){
 metierConnexion mco= new metierConnexion();
-modeleconnexion mdc=mco.seco("z@z.c", "zzzzzz");
+modeleconnexion mdc=mco.seco("root@root.root", "root");
 System.out.println(mdc.getMail());
 }
 }

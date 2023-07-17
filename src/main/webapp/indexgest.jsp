@@ -6,7 +6,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Institut Emeraude</title>
+    <title>Institut Emeraudee</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -55,7 +55,7 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="index.jsp" class="nav-item nav-link active">Accueil</a>
-                <a href="about.jsp" class="nav-item nav-link">A propos de nous</a>
+                <a href='<c:url value="http://localhost:8080/School_JEE/liste.jsp"/>' class="nav-item nav-link">Gestion Etudiants</a>
                 <a href="courses.jsp" class="nav-item nav-link">Cours</a>
                            </div>
             <a href='<c:url value="connexion.jsp"/>' class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Connexion<i class="fa fa-arrow-right ms-3"></i></a>
@@ -74,7 +74,7 @@
                     <div class="container">
                         <div class="row justify-content-start">
                             <div class="col-sm-10 col-lg-8">
-                                <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Meilleur cours en ligne</h5>
+                                <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Gestion des etudiants</h5>
                                 <h1 class="display-3 text-white animated slideInDown">La plateforme d'apprentissage unique</h1>
                                 <p class="fs-5 text-white mb-4 pb-2">Notre école est un lieu d'apprentissage dynamique et stimulant, où les élèves ont la possibilité de développer leurs connaissances, leurs compétences et leur personnalité. Nous nous engageons à fournir une éducation de haute qualité, en mettant l'accent sur l'excellence.</p>
                                 <a  href='<c:url value="http://localhost:8080/School_JEE/inscription.jsp"/>' class="btn btn-light py-md-3 px-md-5 animated slideInRight">S'inscrire</a>
@@ -89,8 +89,8 @@
                     <div class="container">
                         <div class="row justify-content-start">
                             <div class="col-sm-10 col-lg-8">
-                                <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Meilleurs</h5>
-                                <h1 class="display-3 text-white animated slideInDown">Des enseignant qualifiés</h1>
+                                <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Gestion des etudiants</h5>
+                                <h1 class="display-3 text-white animated slideInDown">Gestion des etudiants</h1>
                                 <p class="fs-5 text-white mb-4 pb-2">Nous accordons également une grande importance au bien-être de nos élèves. Nous nous efforçons de créer un environnement inclusif, respectueux et bienveillant, où chaque élève se sent en sécurité et soutenu.</p>
                                 <a  href='<c:url value="inscription.jsp" />' class="btn btn-light py-md-3 px-md-5 animated slideInRight">S'inscrire</a>
                             </div>

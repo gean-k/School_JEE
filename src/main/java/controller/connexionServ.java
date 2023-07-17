@@ -22,38 +22,43 @@ import modele.modeleconnexion;
 @WebServlet(name = "connexionServ", urlPatterns = {"/connexionServ"})
 public class connexionServ extends HttpServlet {
 
-     private static final String VUE_FORMULAIRE = "/connexion.jsp";
-     private static final String VUE_INDEX = "/index.jsp";
-    
+    private static final String VUE_FORMULAIRE = "/connexion.jsp";
+    private static final String VUE_INDEXGEST = "/indexgest.jsp";
+    private static final String VUE_INDEX = "/index.jsp";
+
+//  private static final long serialVersionUID = 1L;
+    public connexionServ() {
+        super();
+    }
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       }
+    }
 
-  
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-         String log = request.getParameter("email");
+
+        String log = request.getParameter("email");
         String pwd = request.getParameter("password");
-        metierConnexion mco= new metierConnexion();
-modeleconnexion mdco=mco.seco(log, pwd);
+        metierConnexion mco = new metierConnexion();
+        modeleconnexion mdco = mco.seco(log, pwd);
 
-if(mdco.getMail()==null){
-    this.getServletContext().getRequestDispatcher(VUE_FORMULAIRE).forward(request, response);
+        if (mdco.getMail() == null) {
+            this.getServletContext().getRequestDispatcher(VUE_FORMULAIRE).forward(request, response);
+        } else {
+            if (mdco.getMdp().length() == 4) {
+                this.getServletContext().getRequestDispatcher(VUE_INDEXGEST).forward(request, response);
+            } else {
+                ServletContext context = request.getServletContext();
+                context.setAttribute("mdco", mdco);
+                this.getServletContext().getRequestDispatcher(VUE_INDEX).forward(request, response);
 
-}else{
-ServletContext context = request.getServletContext();
+            }
 
-    context.setAttribute("mdco", mdco);
-    this.getServletContext().getRequestDispatcher(VUE_INDEX).forward(request, response);
-}
-
-  
+        }
 
     }
 
-  
-   
 }

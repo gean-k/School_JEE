@@ -6,7 +6,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Institut Emeraude</title>
+    <title>GeanFormation</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -44,10 +44,14 @@
     <!-- Spinner End -->
 
 
-  
+    <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-        <a href='<c:url value="index.jsp"/>' class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <a href="index.jsp" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+
             <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Institut Emeraude</h2>
+
+            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>eLEARNING</h2>
+
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -57,10 +61,30 @@
                 <a href="index.jsp" class="nav-item nav-link active">Accueil</a>
                 <a href="about.jsp" class="nav-item nav-link">A propos de nous</a>
                 <a href="courses.jsp" class="nav-item nav-link">Cours</a>
-                           </div>
+
+               
+                    <!--
+                    <div class="nav-item dropdown">
+
+                <div class="nav-item dropdown">
+
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                    <div class="dropdown-menu fade-down m-0">
+                        <a href="team.jsp" class="dropdown-item">Notre equipe</a>
+                        <a href="testimonial.jsp" class="dropdown-item">Testimonial</a>
+                        <a href="404.html" class="dropdown-item">404 Page</a>
+                    </div>
+                </div>
+
+                    --> 
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
             <a href='<c:url value="connexion.jsp"/>' class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Connexion<i class="fa fa-arrow-right ms-3"></i></a>
 
-        </div>
+            </div>
+
+
+        
     </nav>
     <!-- Navbar End -->
 
@@ -74,10 +98,16 @@
                     <div class="container">
                         <div class="row justify-content-start">
                             <div class="col-sm-10 col-lg-8">
-                                <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Meilleur cours en ligne</h5>
+                                <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Apprenant aujourd'hui, elite de demain</h5>
                                 <h1 class="display-3 text-white animated slideInDown">La plateforme d'apprentissage unique</h1>
-                                <p class="fs-5 text-white mb-4 pb-2">Notre école est un lieu d'apprentissage dynamique et stimulant, où les élèves ont la possibilité de développer leurs connaissances, leurs compétences et leur personnalité. Nous nous engageons à fournir une éducation de haute qualité, en mettant l'accent sur l'excellence.</p>
-                                <a  href='<c:url value="http://localhost:8080/School_JEE/inscription.jsp"/>' class="btn btn-light py-md-3 px-md-5 animated slideInRight">S'inscrire</a>
+                                <p class="fs-5 text-white mb-4 pb-2">Notre école est un lieu d'apprentissage dynamique et stimulant, où les élèves ont la possibilité de développer leurs connaissances, leurs compétences et leur personnalité. Nous nous engageons à fournir une éducation de haute qualité, en mettant l'accent sur l'excellence .</p>
+                                <a href='<c:url value="http://localhost:8080/School_JEE/inscription.jsp"/>' class="btn btn-light py-md-3 px-md-5 animated slideInRight">Nous joindre</a>
+                                <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Meilleur cours en ligne</h5>
+                                <h1 class="display-3 text-white animated slideInDown">The Best Online Learning Platform</h1>
+                                <p class="fs-5 text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea sanctus eirmod elitr.</p>
+                                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
+                                <a href="connexion.jsp" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Nous joindre</a>
+
                             </div>
                         </div>
                     </div>
@@ -89,10 +119,17 @@
                     <div class="container">
                         <div class="row justify-content-start">
                             <div class="col-sm-10 col-lg-8">
+
+                                <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Un avenir radieux</h5>
+                                <h1 class="display-3 text-white animated slideInDown">Apprenez auprès des professionnels</h1>
+                                <p class="fs-5 text-white mb-4 pb-2">Notre école est un lieu d'apprentissage dynamique et stimulant, où les élèves ont la possibilité de développer leurs connaissances, leurs compétences et leur personnalité. Nous nous engageons à fournir une éducation de haute qualité, en mettant l'accent sur l'excellence .</p>
+                                <a href='<c:url value="http://localhost:8080/School_JEE/inscription.jsp"/>' class="btn btn-light py-md-3 px-md-5 animated slideInRight">Nous joindre</a>
                                 <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Meilleurs</h5>
-                                <h1 class="display-3 text-white animated slideInDown">Des enseignant qualifiés</h1>
-                                <p class="fs-5 text-white mb-4 pb-2">Nous accordons également une grande importance au bien-être de nos élèves. Nous nous efforçons de créer un environnement inclusif, respectueux et bienveillant, où chaque élève se sent en sécurité et soutenu.</p>
-                                <a  href='<c:url value="inscription.jsp" />' class="btn btn-light py-md-3 px-md-5 animated slideInRight">S'inscrire</a>
+                                <h1 class="display-3 text-white animated slideInDown">Get Educated Online From Your Home</h1>
+                                <p class="fs-5 text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea sanctus eirmod elitr.</p>
+                                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
+                                <a href="connexion.jsp" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Nous joindre</a>
+
                             </div>
                         </div>
                     </div>
@@ -242,6 +279,7 @@
             </div>
         </div>
     </div>
+    <!-- Categories Start -->
 
 
     <!-- 
@@ -445,10 +483,7 @@
     <!-- Team End -->
 
 
-    <!-- Testimonial End 
-    
-    
-    
+    <!-- Testimonial Start -->
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
             <div class="text-center">
@@ -491,8 +526,7 @@
             </div>
         </div>
     </div>
-    
-    -->
+    <!-- Testimonial End -->
         
 
     <!-- Footer Start -->
