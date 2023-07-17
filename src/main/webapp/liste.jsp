@@ -52,7 +52,7 @@ Connection conn= connexion.getConnection();
      PreparedStatement ps=conn.prepareStatement(sql);
    ResultSet rs=ps.executeQuery();
         while(rs.next()){
-           
+           int id = rs.getInt(7);
         
         
       
@@ -65,12 +65,13 @@ Connection conn= connexion.getConnection();
           <td><%=rs.getString(2) %> </td>
            <td><%=rs.getString(8)%> </td>
           <td><%=rs.getString(9) %> </td>
+          
+          <td><button>Modifier</button></td>
+          <td><button>Supprimer</button></td>
         </tr>
   
   <%
         }
-         ps.close();
-    conn.close();
     }catch(SQLException e){e.printStackTrace();}
     
 
@@ -84,11 +85,7 @@ Connection conn= connexion.getConnection();
 
 
 <!-- follow me template -->
-<div class="made-with-love">
-  Made with
-  <i>♥</i> by
-  <a target="_blank" href="https://codepen.io/nikhil8krishnan">Nikhil Krishnan</a>
-</div>
+
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
     <script src="js/table.js"></script>
