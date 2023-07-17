@@ -67,7 +67,12 @@ Connection conn= connexion.getConnection();
           <td><%=rs.getString(9) %> </td>
           
           <td><button>Modifier</button></td>
-          <td><button>Supprimer</button></td>
+           <td>
+        <form method="post" action="SupprimerEleveServlet">
+            <input type="hidden" name="idEleve" value="<%= id %>">
+            <button type="submit">Supprimer</button>
+        </form>
+    </td>
         </tr>
   
   <%
