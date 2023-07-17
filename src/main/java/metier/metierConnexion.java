@@ -38,8 +38,6 @@ if(mdp.length()==4){
             
         
         }
-         ps.close();
-    conn.close();
     }catch(SQLException e){e.printStackTrace();}
     
 }else{

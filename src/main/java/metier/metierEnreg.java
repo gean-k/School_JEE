@@ -55,8 +55,7 @@ try {
     int rowsAffected = pst.executeUpdate();
     // Vérifiez la valeur de rowsAffected pour connaître le nombre de lignes affectées par l'insertion
     System.out.println("********************"+rowsAffected);
-    pst.close();
-    conn.close();
+ 
 } catch (SQLException e) {
     e.printStackTrace();
 }
